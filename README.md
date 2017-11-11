@@ -6,7 +6,7 @@
 ### Requirements:
 * **Java 8**
 
-Sometimes you need to create a set of random (or partially random) objects of some class (like DTO/POJO etc). You know averything about allowed ranges/values of this object's fields but don't want waste your time to implement this kind of logic. Probably this small library with annotations will help you.
+Sometimes you need to create a set of random (or partially random) objects of some class (like DTO/POJO etc). You know everything about allowed ranges/values of this object's fields but don't want waste your time to implement this kind of logic. Probably this small library with annotations will help you.
 
 So, firstly create simple POJO object like this:
 ```
@@ -64,27 +64,27 @@ As you can see, we can instantiate our data with several random data providers l
 
 At the end you can generate as much objects of required class as you need (or as you specified in `@Generate` line).
 ```
-		Iterator<PersonGenerator> iterator = JROFactory.create(PersonGenerator.class).iterator();
+Iterator<PersonGenerator> iterator = JROFactory.create(PersonGenerator.class).iterator();
 
-		while (iterator.hasNext()) {
-			Person p = iterator.next().getDto();
-			System.out.println(p);
-		}
+while (iterator.hasNext()) {
+	Person p = iterator.next().getDto();
+	System.out.println(p);
+}
 ```
 
 Unfortunately, sometimes you need to calculate the ranges for a several fields of your entity in runtime, but there isn't ability  to supply non-constant values to an annotation line. To have ability to specify these values dynamically you can use the following approach:
 ```
-		JROFactory<PersonGenerator> factory = JROFactory.create(PersonGenerator.class);
+JROFactory<PersonGenerator> factory = JROFactory.create(PersonGenerator.class);
 
-		Map<String, Provider<?>> generators = factory.getGenerators();
+Map<String, Provider<?>> generators = factory.getGenerators();
 
-		generators.get("id").setMin(1000);
-		generators.get("id").setMax(2000);
+generators.get("id").setMin(1000);
+generators.get("id").setMax(2000);
 
-		Iterator<PersonGenerator> iterator = factory.iterator();
-		while (iterator.hasNext()) {
-			Person p = iterator.next().getDto();
-			System.out.println(p);
-		}
+Iterator<PersonGenerator> iterator = factory.iterator();
+while (iterator.hasNext()) {
+	Person p = iterator.next().getDto();
+	System.out.println(p);
+}
 ```
-Use and enjoy! And of course all your suggestions are welcome!
+Use and enjoy! And of course all your suggestions are welcome!:sunflower:
