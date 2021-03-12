@@ -8,21 +8,21 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)
 public @interface Generate {
-	Class<?> provider();
+    Class<?> provider();
 
-	int quantity() default 0;
+    int quantity() default 0;
 
-	long min() default 0;
+    long min() default 0;
 
-	long max() default Integer.MAX_VALUE;
+    long max() default Integer.MAX_VALUE;
 
-	String minStr() default "";
+    String minStr() default "";
 
-	String maxStr() default "";
+    String maxStr() default "";
 
-	boolean unique() default false;
+    boolean unique() default false;
 
-	String source() default "";
+    String source() default "";
 
-	String[] params() default {};
+    String[] params() default {};
 }
