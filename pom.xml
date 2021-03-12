@@ -7,6 +7,9 @@
 	<artifactId>jrogen</artifactId>
 	<version>0.9</version>
 	<packaging>jar</packaging>
+	<properties>
+		<src.dir>src/main</src.dir>
+	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
@@ -16,6 +19,7 @@
 		</dependency>
 	</dependencies>
 	<build>
+		<sourceDirectory>${src.dir}</sourceDirectory>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>

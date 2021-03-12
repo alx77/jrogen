@@ -4,9 +4,9 @@
 ## Java Random Object Generator
 
 ### Requirements:
-* **Java 8**
+* **Java 11**
 
-Sometimes you need to create a set of random (or partially random) objects of some class (like DTO/POJO etc). You know everything about allowed ranges/values of this object's fields but don't want waste your time to implement this kind of logic. Probably this small library with annotations will help you.
+Sometimes you need to create a set of random (or partially random) objects of some class (like DTO/POJO etc). You know everything about fields of this object and its ranges/values but don't want waste your time to implement this kind of logic. Perhaps this annotation-controlled small library can help you.
 
 So, firstly create simple POJO object like this:
 ```
@@ -60,9 +60,9 @@ public class PersonGenerator {
 	}
 }
 ```
-As you can see, we can instantiate our data with several random data providers like `IntegerProvider` or more complicated ones to generate another objects like `AddressProvider`. You can generate not only a random values but series of unique (and randomly arranged) values (for example, to use them as ID's of your objects). Also you can create your own project-specific data providers for your purposes.
+As you can see, we can instantiate our data with several random data providers like `IntegerProvider` or more complicated ones to generate another objects like `AddressProvider`. You can generate not only random values but series of unique (and randomly arranged) values (for example, to use them as ID's of your objects). Also, you can create your own project-specific data providers for your purposes.
 
-At the end you can generate as much objects of required class as you need (or as you specified in `@Generate` line).
+At the end you can generate as many objects of required class as you need (or as you specified in `@Generate` line).
 ```
 Iterator<PersonGenerator> iterator = JROFactory.create(PersonGenerator.class).iterator();
 
@@ -72,7 +72,7 @@ while (iterator.hasNext()) {
 }
 ```
 
-Unfortunately, sometimes you need to calculate the ranges for a several fields of your entity in runtime, but there isn't ability  to supply non-constant values to an annotation line. To have ability to specify these values dynamically you can use the following approach:
+Unfortunately, sometimes you need to calculate the ranges for several fields of your entity in runtime, but there isn't ability to supply non-constant values to an annotation line. To have ability to specify these values dynamically you can use the following approach:
 ```
 JROFactory<PersonGenerator> factory = JROFactory.create(PersonGenerator.class);
 
