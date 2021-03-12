@@ -1,7 +1,7 @@
 package net.ugolok.generation;
 
-import net.ugolok.generation.annotations.Generate;
 import net.ugolok.generation.annotations.Generator;
+import net.ugolok.generation.annotations.Generate;
 import net.ugolok.generation.providers.api.Provider;
 
 import javax.naming.ConfigurationException;

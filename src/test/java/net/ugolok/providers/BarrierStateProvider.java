@@ -1,8 +1,8 @@
-package providers;
+package net.ugolok.providers;
 
 import java.util.Iterator;
 
-import dto.BarrierState;
+import net.ugolok.dto.BarrierState;
 import net.ugolok.generation.providers.api.AbstractRandomProvider;
 import net.ugolok.generation.providers.api.Provider;
 

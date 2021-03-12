@@ -60,7 +60,7 @@ public class PersonGenerator {
 	}
 }
 ```
-As you can see, we can instantiate our data with several random data providers like `IntegerProvider` or more complicated ones to generate another objects like `AddressProvider`. You can generate not only random values but series of unique (and randomly arranged) values (for example, to use them as ID's of your objects). Also, you can create your own project-specific data providers for your purposes.
+As you can see, we can instantiate our data with several random data net.ugolok.providers like `IntegerProvider` or more complicated ones to generate another objects like `AddressProvider`. You can generate not only random values but series of unique (and randomly arranged) values (for example, to use them as ID's of your objects). Also, you can create your own project-specific data net.ugolok.providers for your purposes.
 
 At the end you can generate as many objects of required class as you need (or as you specified in `@Generate` line).
 ```
@@ -76,10 +76,10 @@ Unfortunately, sometimes you need to calculate the ranges for several fields of 
 ```
 JROFactory<PersonGenerator> factory = JROFactory.create(PersonGenerator.class);
 
-Map<String, Provider<?>> generators = factory.getGenerators();
+Map<String, Provider<?>> net.ugolok.generators = factory.getGenerators();
 
-generators.get("id").setMin(1000);
-generators.get("id").setMax(2000);
+net.ugolok.generators.get("id").setMin(1000);
+net.ugolok.generators.get("id").setMax(2000);
 
 Iterator<PersonGenerator> iterator = factory.iterator();
 while (iterator.hasNext()) {

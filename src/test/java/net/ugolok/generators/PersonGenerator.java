@@ -1,14 +1,14 @@
-package generators;
+package net.ugolok.generators;
 
-import dto.Address;
-import dto.Person;
+import net.ugolok.dto.Address;
+import net.ugolok.dto.Person;
 import net.ugolok.generation.annotations.Generate;
 import net.ugolok.generation.annotations.Generator;
 import net.ugolok.generation.providers.DateProvider;
 import net.ugolok.generation.providers.FileStringProvider;
 import net.ugolok.generation.providers.IntegerProvider;
 import net.ugolok.generation.providers.PhoneNumberProvider;
-import providers.AddressProvider;
+import net.ugolok.providers.AddressProvider;
 
 import java.time.LocalDate;
 

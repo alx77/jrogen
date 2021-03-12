@@ -1,15 +1,13 @@
-package test;
+package net.ugolok.test;
 
-
-import java.util.Iterator;
-import java.util.Map;
-import javax.naming.ConfigurationException;
-
-import dto.Barrier;
-import generators.BarrierGenerator;
+import net.ugolok.dto.Barrier;
 import net.ugolok.generation.JROFactory;
 import net.ugolok.generation.providers.api.Provider;
+import net.ugolok.generators.BarrierGenerator;
 import org.junit.jupiter.api.Test;
+
+import javax.naming.ConfigurationException;
+import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 

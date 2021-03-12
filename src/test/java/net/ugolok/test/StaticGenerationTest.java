@@ -1,18 +1,17 @@
-package test;
+package net.ugolok.test;
 
-import java.util.Iterator;
-import java.util.TreeMap;
+import net.ugolok.dto.Barrier;
+import net.ugolok.dto.Book;
+import net.ugolok.dto.Person;
+import net.ugolok.generation.JROFactory;
+import net.ugolok.generators.BarrierGenerator;
+import net.ugolok.generators.BookGenerator;
+import net.ugolok.generators.PersonGenerator;
+import org.junit.jupiter.api.Test;
 
 import javax.naming.ConfigurationException;
-
-import dto.Barrier;
-import dto.Book;
-import dto.Person;
-import generators.BarrierGenerator;
-import generators.BookGenerator;
-import generators.PersonGenerator;
-import net.ugolok.generation.JROFactory;
-import org.junit.jupiter.api.Test;
+import java.util.Iterator;
+import java.util.TreeMap;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -56,7 +55,6 @@ public class StaticGenerationTest {
             prevId = person.getId();
         }
         assertEquals(BarrierGenerator.N_QUANTITY, barriersMap.values().size());
-
     }
 
     @Test
@@ -77,6 +75,5 @@ public class StaticGenerationTest {
             prevId = book.getIsbn();
         }
         assertEquals(BookGenerator.N_BOOKS, bookMap.values().size());
-
     }
 }

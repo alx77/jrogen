@@ -1,4 +1,4 @@
-package dto;
+package net.ugolok.dto;
 
 public class Book {
     protected long isbn;

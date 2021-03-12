@@ -1,6 +1,6 @@
-package generators;
+package net.ugolok.generators;
 
-import dto.Book;
+import net.ugolok.dto.Book;
 import net.ugolok.generation.annotations.Generate;
 import net.ugolok.generation.annotations.Generator;
 import net.ugolok.generation.providers.FileStringProvider;

@@ -1,14 +1,14 @@
-package generators;
+package net.ugolok.generators;
 
-import dto.Barrier;
-import dto.BarrierState;
+import net.ugolok.dto.Barrier;
+import net.ugolok.dto.BarrierState;
 import net.ugolok.generation.annotations.Generate;
 import net.ugolok.generation.annotations.Generator;
 import net.ugolok.generation.providers.DateTimeProvider;
 import net.ugolok.generation.providers.IntegerProvider;
 import net.ugolok.generation.providers.LongProvider;
 import net.ugolok.generation.providers.TimestampProvider;
-import providers.BarrierStateProvider;
+import net.ugolok.providers.BarrierStateProvider;
 
 import java.time.LocalDateTime;
 

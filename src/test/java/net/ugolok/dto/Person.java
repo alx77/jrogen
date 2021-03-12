@@ -1,4 +1,4 @@
-package dto;
+package net.ugolok.dto;
 
 import java.time.LocalDate;
 

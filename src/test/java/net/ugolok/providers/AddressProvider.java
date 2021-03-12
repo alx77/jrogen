@@ -1,7 +1,7 @@
-package providers;
+package net.ugolok.providers;
 
-import dto.Address;
-import generators.AddressGenerator;
+import net.ugolok.dto.Address;
+import net.ugolok.generators.AddressGenerator;
 import net.ugolok.generation.JROFactory;
 import net.ugolok.generation.providers.api.AbstractProvider;
 import net.ugolok.generation.providers.api.Provider;
